@@ -615,11 +615,11 @@ $(document).ready(function () {
 		// Update lid image with one for this language
 		// We'll try to load it in the background and if that is successful we replace it.
 		// This allows for the non-existence of the appropriate file
-		if($('#box-lid #lid').length == 0) $('#box-lid').prepend('<div id="lid"><img src="css/images/lid_en.jpg" /></div>');
+		if($('#box-lid #lid').length == 0) $('#box-lid').prepend('<div id="lid"><img src="css/images/lid_en.png" /></div>');
 		var cache = new Image();
 		var fn = function(){ $('#box-lid #lid img').attr('src',cache.src); }
 		cache.onload = fn;
-		cache.src = 'css/images/lid_'+this.langcurrent+'.jpg';
+		cache.src = 'css/images/lid_'+this.langcurrent+'.png';
 		if(cache.complete) fn();
 
 		// Update mode labels
